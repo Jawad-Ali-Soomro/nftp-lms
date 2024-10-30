@@ -13,6 +13,9 @@ const courseSchema = new mongoose.Schema(
       type: Date,
       default: Date.now,
     },
+    courseImage: {
+      type: String,
+    },
     enrolledStudents: [
       {
         type: mongoose.Schema.Types.ObjectId,
