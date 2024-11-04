@@ -13,7 +13,7 @@ const createUser = async (req, res) => {
       $or: [{ email: req.body.email }, { phone_number: req.body.email }],
     });
     if (findUser) {
-      return res.status(400).json({ msg: "This Account Already Exists!" });
+      return res.status(200).json({ msg: "This Account Already Exists!" });
     }
 
     const hashedPassword = await hashPassword({ password: req.body.password });
@@ -26,7 +26,7 @@ const createUser = async (req, res) => {
     });
 
     if (!newUser) {
-      return res.status(500).json({ msg: "Error While Creating User!" });
+      return res.status(300).json({ msg: "Error While Creating User!" });
     }
 
     const qrCodeUrl = await qrcode.toDataURL(secret.otpauth_url);
