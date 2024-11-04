@@ -1,17 +1,7 @@
-:root {
-  --main-bg: #ffefef;
-  --dark-blue: #8a70d6;
-  --light-blue: #e9e3ff;
-  --dark: #424040;
-  --white: white;
-}
-
 * {
   margin: 0;
   padding: 0;
-  font-family: Lato;
-  border-radius: 25px;
-  background: var(--main-bg);
+  font-family: Montserrat;
 }
 
 .flex {
@@ -22,9 +12,4 @@
 
 .col {
   flex-direction: column;
-}
-
-.btn-black {
-  background: black;
-  border: none;
 }

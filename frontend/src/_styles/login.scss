@@ -1,8 +1,110 @@
 .login-container {
   width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba($color: #000000, $alpha: 0.3);
   height: 100vh;
   .login-wrapper {
     padding: 30px;
-    background: var(--white);
+    background: white;
+    border-radius: 20px;
+    gap: 5px;
+    text-transform: uppercase;
+    animation: animate 300ms linear;
+    img {
+      width: 100px;
+    }
+    h1 {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: rgba($color: #000000, $alpha: 0.6);
+    }
+    p {
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .form-container {
+      margin-top: 20px;
+      gap: 10px;
+      .input-wrap {
+        width: 300px;
+        height: 40px;
+        border: 1px solid #80808090;
+        position: relative;
+        border-radius: 10px;
+        label {
+          position: absolute;
+          top: -10px;
+          background: white;
+          padding: 0 10px;
+          height: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 0.6rem;
+          left: 10px;
+          font-weight: 600;
+        }
+        input {
+          width: 280px;
+          height: 99%;
+          border: none;
+          padding-left: 20px;
+          outline: none;
+          background: transparent;
+        }
+      }
+      button {
+        width: 300px;
+        height: 40px;
+        border-radius: 10px;
+        background: royalblue;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 0.7rem;
+        font-weight: 600;
+      }
+      .text {
+        position: relative;
+        span {
+          padding: 10px;
+          background: white;
+          z-index: 1;
+          font-weight: 600;
+        }
+      }
+      .text::after {
+        content: "";
+        width: 300px;
+        height: 1px;
+        background: #80808090;
+        position: absolute;
+      }
+      .sso-opt {
+        gap: 10px;
+        .icon {
+          width: 40px;
+          height: 40px;
+          border: 1px solid #80808090;
+          border-radius: 10px;
+          cursor: pointer;
+        }
+        .btn-reg {
+          width: 150px;
+          background: #333;
+          text-transform: uppercase;
+        }
+      }
+    }
+    @keyframes animate {
+      from {
+        transform: translateX(-100px);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
   }
 }

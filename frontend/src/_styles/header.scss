@@ -1,0 +1,23 @@
+.header-container {
+  width: calc(100% - 100px);
+  padding: 20px 50px;
+  justify-content: space-between;
+  .logo {
+    img {
+      width: 120px;
+    }
+  }
+  .navs {
+    button {
+      width: 120px;
+      height: 45px;
+      border-radius: 25px;
+      border: none;
+      background: royalblue;
+      color: white;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+}

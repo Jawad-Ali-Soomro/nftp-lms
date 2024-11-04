@@ -3,14 +3,14 @@ import "./App.css";
 import { Routes } from "react-router-dom";
 import { Route } from "react-router-dom";
 import { Login } from "./_pages";
+import Header from "./_components/Header";
 
 function App() {
   return (
     <>
+      <Header />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Login />} />
-        </Routes>
+        <Routes></Routes>
       </BrowserRouter>
     </>
   );
