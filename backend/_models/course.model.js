@@ -9,17 +9,21 @@ const courseSchema = new mongoose.Schema(
       type: String,
       required: [true, "Please Enter Description Of Course!"],
     },
+    image: {
+      type: String
+    },
+    outline: [{
+      type: String
+    }],
     created_at: {
       type: Date,
       default: Date.now,
-    },
-    courseImage: {
-      type: String,
     },
     enrolledStudents: [
       {
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",
+        default: []
       },
     ],
   },

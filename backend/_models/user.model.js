@@ -6,6 +6,13 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: [true, "Please Enter Name!"],
     },
+    fathers_name: {
+      type: String,
+    },
+    date_of_birth: {
+      type: Date,
+      default: Date.now
+    },
     email: {
       type: String,
       required: [true, "Please Enter Email"],
